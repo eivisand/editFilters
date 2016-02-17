@@ -5,15 +5,14 @@
 .imageTarget {
   display: inline-block;
   width: 50%;
-  float: left;
 }
 .filterGroup{
   padding-left: 20px;
   padding-right: 20px;
 }
 .controls {
-  width: 50%;
-  float: left;
+  width: 49%;
+  display: inline-block;
 }
 .filterEdit {
   line-height: 25px
