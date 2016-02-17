@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link type="text/css" rel="stylesheet" href="edit.css">
+</head>
+<body>
+  <div class="imageTarget">
+   <img id="filterdude" src="flower.jpg">
+ </div>
+ <div class="controls">
+ <div class="filterGroup">
+   <h2>Light</h2>
+   <form class="filterEdit" oninput="amount.value=inputRange.value">
+     contrast
+     <output name="amount" for="inputRange">100</output>%
+     <input type="range" name="inputRange" class="filterEdit-input" onInput="changeContrast(this.value)" value="100" min="0" max="200" />
+   </form>
+   <form class="filterEdit" oninput="amount.value=inputRange.value">
+     brightness
+     <output name="amount" for="inputRange">100</output>%
+     <input type="range" name="inputRange" class="filterEdit-input" onInput="changeBrightness(this.value)" value="100" min="0" max="200" />
+   </form>
+ </div>
+ <div class="filterGroup">
+   <h2>Color</h2>
+   <form class="filterEdit" oninput="amount.value=inputRange.value">
+     sepia
+     <output name="amount" for="inputRange">0</output>%
+     <input type="range" name="inputRange" class="filterEdit-input" onInput="changeSepia(this.value)" value="0" min="0" max="100" />
+   </form>
+   <form class="filterEdit" oninput="amount.value=inputRange.value">
+     invert
+     <output name="amount" for="inputRange">0</output>%
+     <input type="range" name="inputRange" class="filterEdit-input" onInput="changeInvert(this.value)" value="0" min="0" max="100" />
+   </form>
+   <form class="filterEdit" oninput="amount.value=inputRange.value">
+     saturate
+     <output name="amount" for="inputRange">100</output>%
+     <input type="range" name="inputRange" class="filterEdit-input" onInput="changeSaturate(this.value)" value="100" min="0" max="200" />
+   </form>
+   <form class="filterEdit" oninput="amount.value=inputRange.value">
+     rotate hue
+     <output name="amount" for="inputRange">0</output>deg
+     <input type="range" name="inputRange" class="filterEdit-input" onInput="changeHueRotate(this.value)" value="0" min="0" max="360" />
+   </form>
+   <form class="filterEdit" oninput="amount.value=grayscaleRange.value">
+     grayscale
+     <output name="amount" for="grayscaleRange">0</output>%
+     <input type="range" name="grayscaleRange" class="filterEdit-input" onInput="changeGrayscale(this.value)" value="0" min="0" max="100" />
+   </form>
+ </div>
+ <div class="filterGroup">
+   <h2>Extra</h2>
+   <form class="filterEdit" oninput="amount.value=blurRange.value">
+     blur
+     <output name="amount" for="blurRange">0</output>px
+     <input type="range" name="blurRange" class="filterEdit-input" onInput="changeBlur(this.value)" value="0" min="0" max="20" />
+   </form>
+   <form class="filterEdit" oninput="opacityAmount.value=opacityRange.value">
+     opacity
+     <output name="opacityAmount" for="opacityRange">100</output>%
+     <input type="range" name="opacityRange" class="filterEdit-input" onInput="changeOpacity(this.value)" value="100" min="0" max="100" />
+   </form>
+ </div>
+ </div>
+ <div class="output">
+   <h1>
+     Current Filter
+   </h1>
+   <h3 id="filterValue">
+     sepia(0%) invert(0%) saturate(100%) hue-rotate(0deg) contrast(100%) grayscale(0%) brightness(100%) blur(0px) opacity(100%)
+   </h3>
+ </div>
+ <script type="text/javascript" src="edit.js"></script>
+</body>
+</html>
