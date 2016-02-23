@@ -18,10 +18,12 @@ var setOutput = function(value){
 var filterText = function() {
   return "sepia(" + sepia + "%) invert(" + invert +
     "%) saturate(" + saturate + "%) hue-rotate(" + hueRotate + "deg) contrast(" + contrast +
-    "%) grayscale(" + grayscale + "%) brightness(" + brightness + "%) blur(" + blurAmount + "px) opacity(" + opacity + "%)"
+    "%) grayscale(" + grayscale + "%) brightness(" + brightness + "%) blur(" + blurAmount + "px) opacity(" + opacity + "%);"
 }
 var setFilter = function() {
-  filterdude.setAttribute("style", "-webkit-filter: " + filterText());
+  filterdude.setAttribute("style",
+    "-webkit-filter: " + filterText()
+    + "filter: " + filterText());
   setOutput(filterText());
 }
 
